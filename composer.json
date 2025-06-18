@@ -1,0 +1,36 @@
+{
+  "name": "asanak/laravel-sms-client",
+  "description": "A modern Laravel SMS client for sending and reporting messages via REST API",
+  "type": "laravel-package",
+  "homepage": "http://github.com/",
+  "keywords": [
+    "laravel",
+    "Asanak",
+    "sms",
+    "api"
+  ],
+  "version": "1.0.0",
+  "require": {
+    "php": "^8.0 || ^8.1 || ^8.2",
+    "guzzlehttp/guzzle": "^7.0",
+    "psr/log": "^1.1 || ^2.0 || ^3.0",
+    "illuminate/support": "^9.0 || ^10.0 || ^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Asanak\\Sms\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Asanak\\Sms\\SmsServiceProvider"
+      ],
+      "aliases": {
+        "AsanakSms": "Asanak\\Sms\\Facade\\AsanakSmsFacade"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "license": "MIT"
+}
